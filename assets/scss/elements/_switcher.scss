@@ -1,0 +1,58 @@
+.my_switcher {
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%) rotate(90deg);
+    z-index: 99;
+    @media #{$md-layout} {
+        left: 10px;
+    }
+    @media #{$sm-layout} {
+        left: 4px;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 100px;
+        background: rgba(255,255,255,1);
+        padding: 5px 15px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.05);
+        li {
+            a {
+                position: relative;
+                font-size: 12px;
+                line-height: 22px;
+                font-weight: 500;
+                text-decoration: none;
+                transition: 0.4s;
+                display: flex;
+                flex-direction: row-reverse;
+                align-items: center;
+                justify-content: center;
+                text-transform: uppercase;
+                letter-spacing: 0.3px;
+                img {
+                    padding-left: 6px;
+                    width: 20px;
+                }
+                span {
+                    transform: rotate(-180deg);
+                    display: block;
+                }
+                &.active {
+                    display: none;
+                }
+                &.light {
+                    color: #ffffff;
+                }
+                &.dark {
+                    color: #18191A;
+                }
+            }
+        }
+    }
+}
