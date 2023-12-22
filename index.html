@@ -26,57 +26,7 @@
 <body>
     <div class="main-page active-dark">
         <!-- Start Header -->
-        <header class="header-area formobile-menu header--transparent black-logo-version ">
-            <div class="header-wrapper" id="header-wrapper">
-                <div class="header-left">
-                    <div class="logo">
-                        <a href="index.html">
-                            <img src="assets/images/logo/magedin-horizontal-negative.svg" alt="MagedIn University" width="230" height="60">
-                        </a>
-                    </div>
-                </div>
-                <div class="header-right">
-                    <div class="mainmenunav d-lg-block">
-                        <!-- Start Mainmanu Nav -->
-                        <nav class="main-menu-navbar">
-                            <ul class="mainmenu">
-                                <li>
-                                    <a href="index.html">Home</a>
-                                </li>
-                                <li class="has-droupdown">
-                                    <a href="service.html">Cursos</a>
-                                    <ul class="submenu">
-                                        <li><a href="magento2free.html">Magento 2 Gratuito</a></li>
-                                        <li><a href="magento1.html">Magento 1 Completo</a></li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="about.html">Quem Somos</a>
-                                </li>
-                                <li>
-                                    <a href="contact.html">Contato</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <!-- End Mainmanu Nav -->
-                    </div>
-                    <!-- Start Humberger Menu  -->
-                    <div class="humberger-menu d-block d-lg-none pl--20">
-                        <span class="menutrigger text-white">
-                    <i data-feather="menu"></i>
-                </span>
-                    </div>
-                    <!-- End Humberger Menu  -->
-                    <!-- Start Close Menu  -->
-                    <div class="close-menu d-block d-lg-none">
-                        <span class="closeTrigger">
-                    <i data-feather="x"></i>
-                </span>
-                    </div>
-                    <!-- End Close Menu  -->
-                </div>
-            </div>
-        </header>
+        <div id="header-container"></div>
         <!-- Start Page Wrapper  -->
         <main class="page-wrapper">
 
@@ -857,7 +807,11 @@
     <!-- Main JS -->
     <script src="assets/js/main.js"></script>
 
-
+    <script>
+        $(function(){
+            $("#header-container").load("includes/header.html");
+        });
+    </script>
 </body>
 
 </html>
